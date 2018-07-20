@@ -4,7 +4,10 @@ phases:
  install:
    commands:
      - echo Entered the install phase...
-     - yum install -y awscli ansible
+     - yum install -y awscli
+     - yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+     - yum-config-manager --enable epel
+     - yum install ansible
  build:
    commands:
      - echo Build started on `date`
