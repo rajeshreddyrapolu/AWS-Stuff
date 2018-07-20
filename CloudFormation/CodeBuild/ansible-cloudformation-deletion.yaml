@@ -1,5 +1,8 @@
-- name: tear down old deployment
-  cloudformation:
+---
+- name: Deletion Stack
+  tasks:  
+  - name: tear down old deployment
+    cloudformation:
     stack_name: "ansible-cloudformation"
     state: "absent"
     region: "us-east-1"
