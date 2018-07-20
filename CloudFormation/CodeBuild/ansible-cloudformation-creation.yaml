@@ -12,5 +12,5 @@
      region: "us-east-1"
      disable_rollback: true
      template: "CloudFormation/CodeBuild/Stack_a.json"
-    tags:
-     Name: "ansible-cloudformation"
+     tags:
+      Name: "ansible-cloudformation"
