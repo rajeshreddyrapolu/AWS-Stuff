@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+ install:
+   commands:
+     - echo Entered the install phase...
+     - apt-get awscli -y
+ build:
+   commands:
+     - echo Build started on `date`
+     - aws cloudformation delete-stack --stack-name=CFT-Example
+ post_build:
+   commands:
+     - echo Build completed on `date`

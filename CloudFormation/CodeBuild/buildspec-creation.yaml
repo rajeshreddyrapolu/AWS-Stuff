@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+ install:
+   commands:
+     - echo Entered the install phase...
+     - apt-get awscli -y
+ build:
+   commands:
+     - echo Build started on `date`
+     - aws cloudformation create-stack --stack-name=CFT-Example --template-body=file://CloudFormation/CodeBuild/Stack_a.json --capabilities=CAPABILITY_IAM  
+ post_build:
+   commands:
+     - echo Build completed on `date`
