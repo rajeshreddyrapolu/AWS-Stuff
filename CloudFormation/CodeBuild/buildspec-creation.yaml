@@ -4,7 +4,7 @@ phases:
  install:
    commands:
      - echo Entered the install phase...
-     - sudo yum install -y awscli
+     - yum install -y awscli
  build:
    commands:
      - echo Build started on `date`
