@@ -1,10 +1,10 @@
 ---
- - name: launch ansible cloudformation example
-   cloudformation:
-    stack_name: "ansible-cloudformation"
-    state: "present"
-    region: "us-east-1"
-    disable_rollback: true
-    template: "CloudFormation/CodeBuild/Stack_a.json"
-    tags:
-     Name: "ansible-cloudformation"
+- name: launch ansible cloudformation example
+  cloudformation:
+   stack_name: "ansible-cloudformation"
+   state: "present"
+   region: "us-east-1"
+   disable_rollback: true
+   template: "CloudFormation/CodeBuild/Stack_a.json"
+   tags:
+    Name: "ansible-cloudformation"
