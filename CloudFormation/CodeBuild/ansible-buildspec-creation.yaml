@@ -5,7 +5,7 @@ phases:
    commands:
      - echo Entered the install phase...
      - apt-get update
-     - apt-get install awscli jq ansible
+     - apt-get install awscli jq ansible -y
  build:
    commands:
      - echo Build started on `date`
