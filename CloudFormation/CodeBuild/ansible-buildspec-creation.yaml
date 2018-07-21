@@ -10,8 +10,9 @@ phases:
    commands:
      - echo Build started on `date`
      - export ANSIBLE_PLAYBOOK_PATH=ansible-cloudformation-creation.yaml
-     - ls -la
-     - sh CloudFormation/CodeBuild/ansible-cft-call.sh 
+     - ls -laR
+     - cd CloudFormation/CodeBuild
+     - sh ansible-cft-call.sh 
  post_build:
    commands:
      - echo Build completed on `date`

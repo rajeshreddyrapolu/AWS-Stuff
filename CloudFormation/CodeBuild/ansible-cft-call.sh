@@ -12,7 +12,7 @@ echo "running ansible playbook $ANSIBLE_PLAYBOOK_PATH $ANSIBLE_PLAYBOOK_TAGS"
 ls -l
 ls -lrth
 if [ -z "$ANSIBLE_PLAYBOOK_TAGS" ]; then	
-	ansible-playbook servers -i hosts "$ANSIBLE_PLAYBOOK_PATH"
+	ansible-playbook servers -i ./hosts "$ANSIBLE_PLAYBOOK_PATH"
 else
-	ansible-playbook servers -i hosts "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
+	ansible-playbook servers -i ./hosts "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
 fi
