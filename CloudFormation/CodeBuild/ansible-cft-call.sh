@@ -11,7 +11,7 @@ env | grep -i AWS_
 echo "running ansible playbook $ANSIBLE_PLAYBOOK_PATH $ANSIBLE_PLAYBOOK_TAGS"
 
 if [ -z "$ANSIBLE_PLAYBOOK_TAGS" ]; then
-	ansible-playbook local -i CloudFormation/CodeBuild/hosts "$ANSIBLE_PLAYBOOK_PATH"
+	ansible-playbook servers -i CloudFormation/CodeBuild/hosts "$ANSIBLE_PLAYBOOK_PATH"
 else
-	ansible-playbook local -i CloudFormation/CodeBuild/hosts "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
+	ansible-playbook servers -i CloudFormation/CodeBuild/hosts "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
 fi

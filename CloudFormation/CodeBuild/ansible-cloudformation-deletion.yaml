@@ -1,6 +1,5 @@
 ---
 - name: provision stack deletion
-  connection: local
   gather_facts: false
 
   tasks:

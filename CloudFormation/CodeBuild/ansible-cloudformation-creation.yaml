@@ -1,6 +1,5 @@
 ---
 - name: provision stack
-  connection: local
   gather_facts: false
 
   tasks:
