@@ -1,6 +1,5 @@
 ---
 - name: provision stack deletion
-  hosts: localhost
   connection: local
   gather_facts: false
 
