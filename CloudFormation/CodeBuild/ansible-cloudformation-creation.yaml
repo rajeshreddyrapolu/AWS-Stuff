@@ -1,7 +1,6 @@
 ---
-- name: provision stack
+- hosts: servers
   gather_facts: false
-
   tasks:
   - name: launch ansible cloudformation example
     cloudformation:
