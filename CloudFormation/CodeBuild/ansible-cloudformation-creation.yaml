@@ -1,8 +1,4 @@
 ---
-- name: Launch stack_name
-  hosts: localhost
-  connection: local
-
 - name: launch ansible cloudformation example
    cloudformation:
     stack_name: "ansible-cloudformation"
