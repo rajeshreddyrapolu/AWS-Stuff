@@ -9,7 +9,7 @@ phases:
  build:
    commands:
      - echo Build started on `date`
-     - export ANSIBLE_PLAYBOOK_PATH=CloudFormation/CodeBuild/ansible-cloudformation-deletion.yaml
+     - export ANSIBLE_PLAYBOOK_PATH=ansible-cloudformation-deletion.yaml
      - sh CloudFormation/CodeBuild/ansible-cft-call.sh 
  post_build:
    commands:
