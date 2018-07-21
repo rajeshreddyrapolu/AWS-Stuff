@@ -13,7 +13,8 @@ ls -l
 ls -lrth
 echo "Present Woring Directory $(pwd)"
 if [ -z "$ANSIBLE_PLAYBOOK_TAGS" ]; then	
-	ansible-playbook -i ./hosts "$ANSIBLE_PLAYBOOK_PATH"
+	#ansible-playbook -i ./hosts "$ANSIBLE_PLAYBOOK_PATH"
+	ansible-playbook "$ANSIBLE_PLAYBOOK_PATH"
 else
-	ansible-playbook -i ./hosts "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
+	ansible-playbook "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
 fi

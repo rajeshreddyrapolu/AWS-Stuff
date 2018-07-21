@@ -1,13 +1,14 @@
 ---
-- hosts: servers
-  gather_facts: false
-  tasks:
-  - name: launch ansible cloudformation example
-    cloudformation:
-     stack_name: "ansible-cloudformation"
-     state: "present"
-     region: "us-east-1"
-     disable_rollback: true
-     template: "Stack_a.json"
-     tags:
-      Name: "ansible-cloudformation"
+- name: Launch stack_name
+  hosts: localhost
+  connection: local
+
+- name: launch ansible cloudformation example
+   cloudformation:
+    stack_name: "ansible-cloudformation"
+    state: "present"
+    region: "us-east-1"
+    disable_rollback: true
+    template: "Stack_a.json"
+    tags:
+     Name: "ansible-cloudformation"
