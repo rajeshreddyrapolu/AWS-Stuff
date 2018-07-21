@@ -11,6 +11,7 @@ env | grep -i AWS_
 echo "running ansible playbook $ANSIBLE_PLAYBOOK_PATH $ANSIBLE_PLAYBOOK_TAGS"
 ls -l
 ls -lrth
+echo "Present Woring Directory $(pwd)"
 if [ -z "$ANSIBLE_PLAYBOOK_TAGS" ]; then	
 	ansible-playbook servers -i ./hosts "$ANSIBLE_PLAYBOOK_PATH"
 else
