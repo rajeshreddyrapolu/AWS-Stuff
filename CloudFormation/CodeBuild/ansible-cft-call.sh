@@ -9,9 +9,9 @@ export AWS_SECRET_ACCESS_KEY=$(echo $temp_role | jq .Credentials.SecretAccessKey
 export AWS_ACCESS_KEY_ID=$(echo $temp_role | jq .Credentials.AccessKeyId | xargs)
 env | grep -i AWS_
 echo "running ansible playbook $ANSIBLE_PLAYBOOK_PATH $ANSIBLE_PLAYBOOK_TAGS"
-
-if [ -z "$ANSIBLE_PLAYBOOK_TAGS" ]; then
-	
+ls -l
+ls -lrth
+if [ -z "$ANSIBLE_PLAYBOOK_TAGS" ]; then	
 	ansible-playbook servers -i hosts "$ANSIBLE_PLAYBOOK_PATH"
 else
 	ansible-playbook servers -i hosts "$ANSIBLE_PLAYBOOK_PATH" -t "$ANSIBLE_PLAYBOOK_TAGS"
